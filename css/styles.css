@@ -73,6 +73,23 @@
   line-height: 1.5;
 }
 
+.active-link {
+  position: relative;
+  display: inline-block;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  width: 48px;
+  height: 4px;
+  background-color: #404BBF;
+  border-radius: 2px;
+}
+
 .address-text {
   display: flex;
   gap: 40px;
@@ -207,7 +224,10 @@ a {
   align-items: center;
   text-align: center;
   padding: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow:
+      0 2px 1px 0px rgba(46, 47, 66, 0.08),
+      0 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0 1px 6px 0px rgba(46, 47, 66, 0.08);
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
@@ -251,6 +271,10 @@ section ul {
   border-right: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
   object-fit: cover;
+}
+
+.our-portfolio li:hover {
+  box-shadow: 0 1px 1px 1px rgba(231, 233, 252, 1);
 }
 
 .our-portfolio li img {
@@ -334,28 +358,67 @@ ul {
 }
 
 .icon:hover {
-  background: #005fcc;
-  transform: translateY(-3px);
+  background: #4D5AE5;
 }
 
+.our-team-section .social-container {
+  gap: 24px;
+}
+
+.our-team-section .icon {
+  width: 40px;
+  height: 40px;
+}
+
+.our-team-section .icon i {
+  font-size: 16px;
+}
 .img-wrapper {
   position: relative;
   display: inline-block;
   margin: 0 auto;
 }
 
-.project-card {
+.overlay {
   position: absolute;
-  width: 296px;
-  height: 96px;
-  top: 40px;
-  color: white;
-  font-size: 16px;
+  top: 0;
+  left: 50;
   font-family: "Roboto", sans-serif;
-  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+  background-color: #4D5AE5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 16px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.overlay p {
+  margin-top: 40px;
   margin-left: 32px;
   margin-right: 32px;
-  border-radius: 6px;
+  margin-bottom: 164px;
+  width: 296px;
+  height: 96px;
+}
+
+
+
+.img-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .social-title {
@@ -376,6 +439,17 @@ ul {
   display: flex;
   gap: 16px;
   padding-top: 24px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background-color: #4D5AE5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 .div-footer {
