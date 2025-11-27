@@ -359,6 +359,33 @@ ul {
   background: #4d5ae5;
 }
 
+/* Icon kutusu */
+.icon-box {
+  width: 264px;
+  height: 112px;
+  background-color: #f4f4fb;
+  /* görseldeki açık gri kutu */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  /* başlığın 8px üstünde */
+}
+
+/* SVG ikon */
+.icon-box svg {
+  width: 64px;
+  height: 64px;
+  stroke: #2e2f42;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Mavi vurgu noktası için */
+.icon-box svg circle {
+  fill: #4d5ae5;
+}
 
 .our-team-section .social-container {
   gap: 24px;
