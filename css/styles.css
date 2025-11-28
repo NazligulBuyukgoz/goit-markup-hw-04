@@ -200,6 +200,10 @@ a {
   box-sizing: border-box;
 }
 
+.our-team-section .icon:hover {
+  background-color: #31d0aa;
+}
+
 .team-list {
   display: flex;
   justify-content: center;
@@ -474,6 +478,10 @@ ul {
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #31d0aa;
 }
 
 .div-footer {
